@@ -1,0 +1,11 @@
+﻿<Application x:Class="MobileShop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MobileShop"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <local:MainViewModel x:Key="MainViewModel"/>
+        <local:Base64ToBitmapImageConverter x:Key="Base64ToBitmapImageConverter" />
+    </Application.Resources>
+    
+</Application>
