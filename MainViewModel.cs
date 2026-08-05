@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Windows.Threading;
 
@@ -38,7 +39,7 @@ namespace MobileShop
         /// </summary>
         public MainViewModel()
         {
-            _repository = new MobilePhoneSqliteRepository();
+            _repository = App.AppHost.Services.GetRequiredService<IRepository<MobilePhone>>();
 
             var mobilePhonesList = _repository.GetAll().ToList();
             mobilePhonesList.Sort();
